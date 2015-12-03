@@ -3,6 +3,10 @@
 dir=${1-/local/$USER/python}
 tmpdir=/local/$USER/tmp
 
+if [ -z "$( ls /local/$USER/python/lib | grep yasm)"]; then
+  ./yasm_install.sh
+fi
+
 export LD_LIBRARY_PATH=/local/$USER/$dir/lib:$LD_LIBRARY_PATH
 export PATH=/local/$USER/python/bin:$PATH
 
