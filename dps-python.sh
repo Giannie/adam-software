@@ -5,6 +5,8 @@ export PATH=/local/$USER/python/bin:$PATH
 export WORKON_HOME=/local/$USER/$dir/env
 source /local/$USER/$dir/bin/virtualenvwrapper.sh
 
-module load intel/composerxe/composer_xe_2015.3.187
-export LANG=C
-export PS1='\u@\h:\w\$ '
+if [ "${HOSTNAME##dps}" -gt "99" ]; then
+    module load intel/composerxe/composer_xe_2015.3.187
+    export LANG=C
+    export PS1='\u@\h:\w\$ '
+fi
