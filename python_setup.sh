@@ -9,7 +9,7 @@ python_dl=${python_url##h*/}
 python_dl=${python_dl%.tar.xz}
 
 mkdir -p $dir
-cd $dir
+cd /tmp
 
 wget $python_url
 wget $getpip_url
