@@ -9,7 +9,7 @@ cd $tmpdir
 
 url=http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
 
-dl=${ffmpegurl##h*/}
+dl=${url##h*/}
 src_dir=${dl%.tar.gz}
 
 wget $url
