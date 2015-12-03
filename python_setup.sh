@@ -22,7 +22,7 @@ cd $python_dl
 make
 make install
 
-cd $dir
+cd /tmp
 
 ln -s $dir/bin/python2.7 $dir/bin/python
 export PATH=$dir/bin:$PATH
