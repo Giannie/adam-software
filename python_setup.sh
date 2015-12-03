@@ -1,8 +1,8 @@
 #!/bin/sh
 
-dir=${1-/local/$USER/usr}
+dir=${1-/local/$USER/python}
 
-python_url=https://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
+python_url=https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tar.xz
 getpip_url=https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 
 python_dl=${python_url##h*/}

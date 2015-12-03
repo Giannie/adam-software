@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dir=${1-/local/$USER/software}
+dir=${1-/local/$USER/python}
 
 mkdir -p $dir
 cd /tmp
