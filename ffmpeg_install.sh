@@ -1,9 +1,11 @@
 #!/bin/sh
 
 dir=${1-/local/$USER/python}
+tmpdir=/local/$USER/tmp
 
 mkdir -p $dir
-cd /tmp
+mkdir -p $tmpdir
+cd $tmpdir
 
 ffmpegurl=https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
 
@@ -19,3 +21,5 @@ cd $ffmpeg_dir
 ./configure --prefix=$dir
 make
 make install
+
+rm -rf $tmpdir

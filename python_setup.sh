@@ -1,7 +1,7 @@
 #!/bin/sh
 
 dir=${1-/local/$USER/python}
-
+tmpdir=/local/$USER/tmp
 python_url=https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tar.xz
 getpip_url=https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 
@@ -9,7 +9,8 @@ python_dl=${python_url##h*/}
 python_dl=${python_dl%.tar.xz}
 
 mkdir -p $dir
-cd /tmp
+mkdir -p $tmpdir
+cd $tmpdir
 
 wget $python_url
 wget $getpip_url
@@ -22,7 +23,7 @@ cd $python_dl
 make
 make install
 
-cd /tmp
+cd $tmpdir
 
 ln -s $dir/bin/python2.7 $dir/bin/python
 export PATH=$dir/bin:$PATH
@@ -31,3 +32,5 @@ python get-pip.py
 
 pip install numpy
 pip install scipy matplotlib sympy virtualenv virtualenvwrapper
+
+rm -rf $tmpdir
