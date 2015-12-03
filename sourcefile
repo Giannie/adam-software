@@ -1,0 +1,2 @@
+export PATH=/local/$USER/software/bin:$PATH
+export LD_LIBRARY_PATH=/local/$USER/software/lib:$LD_LIBRARY_PATH
