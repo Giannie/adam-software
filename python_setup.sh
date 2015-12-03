@@ -27,7 +27,7 @@ cd $tmpdir
 
 ln -s $dir/bin/python2.7 $dir/bin/python
 export PATH=$dir/bin:$PATH
-export LD_LIBRARY_PATH=/local/$USER/$dir/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$dir/lib:$LD_LIBRARY_PATH
 
 python get-pip.py
 
