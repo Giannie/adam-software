@@ -4,6 +4,7 @@ dir=${1-/local/$USER/python}
 tmpdir=/local/$USER/tmp
 
 export LD_LIBRARY_PATH=/local/$USER/$dir/lib:$LD_LIBRARY_PATH
+export PATH=/local/$USER/python/bin:$PATH
 
 mkdir -p $dir
 mkdir -p $tmpdir
