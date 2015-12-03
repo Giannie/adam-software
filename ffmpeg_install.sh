@@ -3,6 +3,8 @@
 dir=${1-/local/$USER/python}
 tmpdir=/local/$USER/tmp
 
+source ~/adam-software/dps-python.sh
+
 mkdir -p $dir
 mkdir -p $tmpdir
 cd $tmpdir
