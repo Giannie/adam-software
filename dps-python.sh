@@ -1,10 +1,9 @@
 # User specific aliases and functions
-user=$USER
 dir=python
-export LD_LIBRARY_PATH=/local/$user/$dir/Python-2.7.10:/local/$user/$dir/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/local/$USER/$dir/Python-2.7.10:/local/$USER/$dir/lib:$LD_LIBRARY_PATH
 export PATH=/local/$USER/python/bin:$PATH
-export WORKON_HOME=/local/townsend/python/env
-source /local/townsend/python/bin/virtualenvwrapper.sh
+export WORKON_HOME=/local/$USER/$dir/env
+source /local/$USER/$dir/bin/virtualenvwrapper.sh
 
 module load intel/composerxe/composer_xe_2015.3.187
 export LANG=C
