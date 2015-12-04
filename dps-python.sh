@@ -3,7 +3,9 @@ dir=python
 export LD_LIBRARY_PATH=/local/$USER/$dir/lib:$LD_LIBRARY_PATH
 export PATH=/local/$USER/python/bin:$PATH
 export WORKON_HOME=/local/$USER/$dir/env
-source /local/$USER/$dir/bin/virtualenvwrapper.sh
+if [ -f /local/$USER/$dir/bin/virtualenvwrapper.sh ]; then
+    source /local/$USER/$dir/bin/virtualenvwrapper.sh
+fi
 
 if [ "${HOSTNAME##dps}" -gt "99" ]; then
     module load intel/composerxe/composer_xe_2015.3.187
